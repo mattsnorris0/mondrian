@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid {
+      display: grid;
+      width: 748px;
+      height: 748px;
+      grid-template-rows: 416px 130px 155px 20px;
+      grid-template-columns: 320px 198px 153px 50px;
+      /* border: 9px solid #000; */
+      gap: 9px;
+      background-color: #000;
+      
+    }
+
+    .white {
+      background-color: #f0f1ec;
+      /* border: 4.5px solid #000; */
+    }
+
+    .red {
+      background-color: #e72f24;
+      /* border-bottom: 4.5px solid #000; */
+      /* border-right: 4.5px solid #000; */
+      order: 1;
+    }
+
+    .yellow {
+      background-color: #F9D01E;
+      /* border: 4.5px solid #000; */
+      /* border-bottom: none; */
+      order: 8;
+    }
+
+    .blue {
+      background-color: #004592;
+      /* border: 4.5px solid #000; */
+      /* grid-row-start: 2; */
+      /* border-bottom: 10px solid #000; */
+      /* border-right: none; */
+      order: 5;
+    }
+
+    .black {
+      background-color: #232629;
+      /* border: 4.5px solid #000; */
+      /* border-bottom: none; */
+      order: 9;
+    }
+
+    .first {
+      /* grid-column-start: 2; */
+      /* grid-column-end: 5; */
+      /* border-right: none; */
+      /* border-top: none; */
+      order: 2;
+      grid-column: span 3;
+    }
+
+    .second {
+      /* grid-row-start: 2; */
+      /* grid-row-end: 4; */
+      /* border-left: none; */
+      order: 3;
+      grid-row: span 2;
+    }
+
+    .third {
+      /* grid-row-start: 2; */
+      /* grid-row-end: 4; */
+      /* grid-column-start: 2; */
+      /* grid-column-end: 4; */
+      order: 4;
+      /* grid-column: span 2; */
+      /* grid-row: span 2; */
+      grid-area: span 2 / span 2;
+    }
+
+    .fourth {
+      /* grid-column-start: 1; */
+      /* border-bottom: none; */
+      /* border-left: none; */
+      order: 7;
+    }
+
+    .fifth {
+      /* grid-column-start: 4; */
+      /* grid-row-start: 3; */
+      /* grid-row-end: 5; */
+      /* border-right: none; */
+      /* border-bottom: none; */
+      border-top: 10px solid #000;
+      order: 6;
+      grid-row: span 2;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div class="flex">
+    <div class="grid">
+      <div class="red"></div>
+      <div class="white first"></div>
+      <div class="white second"></div>
+      <div class="white third"></div>
+      <div class="white fourth"></div>
+      <div class="yellow"></div>
+      <div class="white fifth"></div>
+      <div class="blue"></div>
+      <div class="black"></div>
+    </div>
+</div>
+  
+</body>
+
+</html>
